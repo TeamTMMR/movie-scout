@@ -6,11 +6,11 @@ import Header from "./components/Header"
 import Home from "./pages/Home"
 
 
-const App = () => {
+const App = (props) => {
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header {...props} />
       <Routes>
         <Route exact path="/" element={<Home  />} />
       </Routes>
