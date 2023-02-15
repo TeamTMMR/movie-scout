@@ -33,3 +33,48 @@ body {
 .card-subtitle {
     color: white;
 }
+
+.welcome {
+    height: 22rem;
+    width: 65%;
+    background-color: lightgrey;
+    border-radius: .25rem;
+    box-shadow: 3px black;
+    justify-content: center;
+    
+}
+.welcome h1 {
+    color: green;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: rgb(5, 3, 49);
+    
+}
+
+.navbar-brand {
+    color: white;
+}
+.nav-link {
+    color: white;
+}
+.navbar-toggler-icon {
+    color: white;
+}
+.nav_item::after {
+ color: white;
+
+}
+
+.footer {
+    height: 4rem;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: rgb(5, 3, 49);
+    align-items: center;
+    justify-content: center;  
+    display: flex;
+
+}
