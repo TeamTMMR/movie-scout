@@ -1,10 +1,10 @@
     
     user = User.where(email: "test@example.com").first_or_create(password: "password", password_confirmation: "password")
 
-    movie = [
+    movies = [
       {
         title:"The Godfather",
-        release_year: 2016
+        release_year: 2016,
         genre:"Drama",
         run_time:"2:55m",
         description:"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.",
@@ -13,7 +13,7 @@
       }
     ]
     
-    movie_seeds.each do |movie|
+    movies.each do |movie|
       user.movies.create(movie)
       p "creating: #{movie}"
     end
