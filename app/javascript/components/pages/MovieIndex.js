@@ -11,6 +11,7 @@ const MovieIndex = ({ movies }) => {
             style={{
               width: "18rem",
             }}
+            key={index}
           >
             <img alt="card with movie poster and title" src={movie.img_url} />
             <CardBody>
