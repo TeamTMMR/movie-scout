@@ -24,4 +24,25 @@ RSpec.describe "Movies", type: :request do
             expect(movie.length).to eq 1
         end
     end
+    describe "POST /create" do
+        it "creates a movie" do
+            movie_params = {
+                movie:{
+                    title: "The Godfather",
+                    release_year: 1972,
+                    genre: "Drama",
+                    run_time: "2h 55m",
+                    description: "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.",
+                    img_url: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+                    user_id: user.id,
+                }
+            }
+
+            post '/movies', params: movie_params
+
+            expect(response).to have_http_status(200)
+            movie = Movie.first
+            expect(movie.title).to eq ("The Godfather")
+        end
+    end
 end
