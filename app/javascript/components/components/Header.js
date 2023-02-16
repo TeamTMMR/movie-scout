@@ -30,6 +30,11 @@ const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out
                 Sign In
               </a>
             </NavLink>
+            <NavLink>
+              <a href={new_user_route} className="nav-link">
+                Sign Up
+              </a>
+            </NavLink>
           </NavItem>
         )}
         {logged_in && (
@@ -37,6 +42,11 @@ const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out
             <NavLink>
               <a href="/movieindex" className="nav-link">
                 All Movies
+              </a>
+            </NavLink>
+            <NavLink>
+              <a href="/mymovies" className="nav-link">
+                My Movies
               </a>
             </NavLink>
             <NavLink>

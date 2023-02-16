@@ -6,6 +6,8 @@ import Home from "./pages/Home"
 import MovieIndex from "./pages/MovieIndex";
 import AboutUs from "./pages/AboutUs"
 import MovieNew from "./pages/MovieNew"
+import MyMovies from "./pages/MyMovies"
+import NotFound from "./pages/NotFound"
 
 
 const App = (props) => {
@@ -27,9 +29,11 @@ const App = (props) => {
         <Header {...props} />
         <Routes>
           <Route exact path="/" element={<Home  />} />
-          <Route path="/movieindex" element={<MovieIndex movies= {movies} />} />
+          <Route path="/movieindex" element={<MovieIndex movies={movies}/>} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/movienew" element={<MovieNew />} />
+          <Route path="/mymovies" element={<MyMovies movies={movies} current_user={props.current_user}/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
