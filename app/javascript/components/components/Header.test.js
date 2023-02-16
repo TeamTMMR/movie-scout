@@ -14,7 +14,6 @@ describe("<Header />", () => {
           <Header />
       </BrowserRouter>
     )
-    screen.debug()
     const text = screen.getByText(/all movies/i)
     expect(text).toBeInTheDocument()
   })
