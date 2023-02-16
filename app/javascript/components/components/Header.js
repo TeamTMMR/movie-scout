@@ -7,33 +7,61 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Col,
 } from 'reactstrap';
 
-const Header = (args) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out_route}) => {
   return (
+  <>
     <div>
-      <Navbar {...args}>
+      <Navbar>
         <NavbarBrand href="/">Movie Scout</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+  
           <Nav className="me-auto" navbar>
-            <NavItem>
-              <NavLink href="/sign_in_route">Sign In</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                Sign Up 
-              </NavLink>
-            </NavItem>
+        {!logged_in && (
+          <NavItem>
+            <NavLink>
+              <a href="/movieindex" className="nav-link">
+                All Movies
+              </a>
+            </NavLink>
+            <NavLink>
+              <a href={sign_in_route} className="nav-link">
+                Sign In
+              </a>
+            </NavLink>
+          </NavItem>
+        )}
+        {logged_in && (
+          <NavItem>
+            <NavLink>
+              <a href="/movieindex" className="nav-link">
+                All Movies
+              </a>
+            </NavLink>
+            <NavLink>
+              <a href={sign_out_route} className="nav-link">
+                Sign Out
+              </a>
+            </NavLink>
+            <NavLink>
+              <a href= "/aboutus" className="nav-link">
+                About Us
+              </a>
+            </NavLink>
+            <NavLink>
+              <a href="/movienew" className="nav-link">
+                Upload Movie
+              </a>
+            </NavLink>
+          </NavItem>
+        )}
           </Nav>
-        </Collapse>
       </Navbar>
     </div>
-  );
+  </>
+             
+  )
 }
 
 export default Header;
