@@ -1,26 +1,26 @@
 import React from "react";
 import { Card, CardTitle, CardBody, CardSubtitle, Button } from "reactstrap";
 
-const MyMovies = ({ movies, current_user, index }) => {
+const MyMovies = ({ movies, current_user }) => {
   const userMovies = movies?.find((movie) => {
     return movie.user_id === current_user.id
   })
-  
   return (
     <main>
       <h1> My Movie List </h1>
-      {movies?.map((userMovies, index) => {
+      {userMovies?.map((movie, index) => {
         return (
           <Card
             style={{
               width: "18rem",
             }}
+            key={index}
           >
-            <img alt="card with movie poster and title" src={userMovie.img_url} />
+            <img alt="card with movie poster and title" src={movie.img_url} />
             <CardBody>
-              <CardTitle tag="h5">{userMovies.title}</CardTitle>
+              <CardTitle tag="h5">{movie.title}</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
-                {userMovies.genre}
+                {movie.genre}
               </CardSubtitle>
               <Button>More Details</Button>
             </CardBody>
