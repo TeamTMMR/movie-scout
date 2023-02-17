@@ -1,9 +1,10 @@
 import React from "react";
-import { Card, CardTitle, CardBody, CardSubtitle, Button } from "reactstrap";
+import { Card, CardTitle, CardBody, CardSubtitle,  } from "reactstrap";
+import { NavLink } from "react-router-dom";
 
 const MovieIndex = ({ movies }) => {
-  return (
-    <main>
+return (
+    <main >
       <h1> Movie List </h1>
       {movies?.map((movie, index) => {
         return (
@@ -19,7 +20,9 @@ const MovieIndex = ({ movies }) => {
               <CardSubtitle className="mb-2 text-muted" tag="h6">
                 {movie.genre}
               </CardSubtitle>
-              <Button>More Details</Button>
+              <NavLink to={`/movieshow/${movie.id}`} className="nav-link">
+                See More Details
+              </NavLink>
             </CardBody>
           </Card>
         );
