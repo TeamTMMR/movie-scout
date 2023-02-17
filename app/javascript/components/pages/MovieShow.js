@@ -11,18 +11,19 @@ const MovieShow = ({movies}) => {
         <>
           <div className="show-container">
             <img 
-            src={currentMovie.img_url}
-            alt="movie cover"
+              src={currentMovie.img_url}
+              alt="movie cover"
             />
-            <h2> {currentMovie.title} </h2>
+            <h2>{currentMovie.title} </h2>
             <h4>{currentMovie.release_year}</h4>
             <h5>{currentMovie.genre}</h5>
-            <h6> {currentMovie.run_time} </h6>
-            <p> {currentMovie.description} </p>
+            <h6>{currentMovie.run_time}</h6>
+            <p>Synopsis: {currentMovie.description}</p>
           </div>
           <NavLink 
-          to={'/movieindex'} 
-          className="return-link">
+            to={'/movieindex'} 
+            className="return-link"
+          >
             See All Movies
           </NavLink>
         </>
