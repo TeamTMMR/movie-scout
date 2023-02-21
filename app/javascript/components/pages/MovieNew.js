@@ -9,18 +9,17 @@ import {
   Button,
 } 
 from 'reactstrap'
-import { useNavigate } from "react-router-dom"
 
-const MovieNew = () => {
+const MovieNew = ({current_user}) => {
 
-  // const navigate = useNavigate()
   const [newMovie, setNewMovie] = useState({
     title: '',
     genre: '',
     release_year: '',
     run_time: '',
     description: '',
-    img_url: ''
+    img_url: '',
+    user_id: current_user.id,
   })
 
   const handleChange = (e) => {
