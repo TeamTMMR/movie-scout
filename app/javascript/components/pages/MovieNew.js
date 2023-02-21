@@ -11,16 +11,16 @@ import {
 from 'reactstrap'
 import { useNavigate } from "react-router-dom"
 
-const MovieNew = ({current_user}) => {
+const MovieNew = ({ createMovie, current_user }) => {
 
   const navigate = useNavigate()
   const [newMovie, setNewMovie] = useState({
-    title: '',
-    genre: '',
-    release_year: '',
-    run_time: '',
-    description: '',
-    img_url: '',
+    title: "",
+    genre: "",
+    release_year: "",
+    run_time: "",
+    description: "",
+    img_url: "",
     user_id: current_user.id,
   })
 
@@ -29,6 +29,7 @@ const MovieNew = ({current_user}) => {
   }
 
   const handleSubmit = () => {
+    createMovie(newMovie)
     navigate("/mymovies")
   }
 
@@ -47,7 +48,7 @@ const MovieNew = ({current_user}) => {
                   id="title"
                   name="title"
                   placeholder="Movie Title"
-                  type="title"
+                  type="text"
                   onChange={handleChange} 
                   value={newMovie.title}
                 />
@@ -62,7 +63,7 @@ const MovieNew = ({current_user}) => {
                   id="genre"
                   name="genre"
                   placeholder="Movie Genre"
-                  type="genre"
+                  type="text"
                   onChange={handleChange} 
                   value={newMovie.genre}
                 />
@@ -77,11 +78,11 @@ const MovieNew = ({current_user}) => {
                 </Label>
                 <Input
                   id="releaseYear"
-                  name="releaseYear"
+                  name="release_year"
                   placeholder="Movie Release Year"
-                  type="releaseYear"
+                  type="number"
                   onChange={handleChange} 
-                  defaultValue={newMovie.release_year}
+                  value={newMovie.release_year}
                 />
               </FormGroup>
             </Col>
@@ -92,11 +93,11 @@ const MovieNew = ({current_user}) => {
                 </Label>
                 <Input
                   id="runTime"
-                  name="runTime"
+                  name="run_time"
                   placeholder="Movie Run Time"
-                  type="runTime"
+                  type="text"
                   onChange={handleChange} 
-                  defaultValue={newMovie.run_time}
+                  value={newMovie.run_time}
                 />
               </FormGroup>
             </Col>
@@ -109,7 +110,7 @@ const MovieNew = ({current_user}) => {
               id="description"
               name="description"
               placeholder="Description of Movie"
-              type="description"
+              type="text"
               onChange={handleChange} 
               value={newMovie.description}
             />
@@ -120,10 +121,11 @@ const MovieNew = ({current_user}) => {
             </Label>
             <Input
               id="image"
-              name="image"
+              name="img_url"
               placeholder="Image URL Here"
+              type="text"
               onChange={handleChange} 
-              defaultValue={newMovie.img_url}
+              value={newMovie.img_url}
             />
           </FormGroup>
           <Button onClick={handleSubmit}>
