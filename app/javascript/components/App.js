@@ -15,14 +15,28 @@ const App = (props) => {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    readMovies()
+    readMovie()
   }, [])
 
-  const readMovies = () => {
+  const readMovie = () => {
     fetch("/movies")
       .then((response) => response.json())
       .then((payload) => {setMovies(payload)})
       .catch((error) => console.log(error))
+  }
+
+  const createMovie = (newMovie) => {
+    console.log("newMovie", newMovie)
+    fetch("/movies", {
+      body: JSON.stringify(newMovie),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+    .then((response) => response.json())
+    .then((payload) => readMovie())
+    .catch((errors) => console.log("Movie create errors:", errors))
   }
 
     return (
@@ -33,7 +47,7 @@ const App = (props) => {
             <Route exact path="/" element={<Home  />} />
             <Route path="/movieindex" element={<MovieIndex movies={movies}/>} />
             <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/movienew" element={<MovieNew current_user={props.current_user}/>} />
+            <Route path="/movienew" element={<MovieNew current_user={props.current_user} createMovie={createMovie}/>} />
             <Route path="/mymovies" element={<MyMovies movies={movies} current_user={props.current_user}/>} />
             <Route path="/movieshow/:id" element={<MovieShow movies={movies} />} />
             <Route path="*" element={<NotFound />} />
