@@ -26,7 +26,6 @@ const App = (props) => {
   }
 
   const createMovie = (newMovie) => {
-    console.log("newMovie", newMovie)
     fetch("/movies", {
       body: JSON.stringify(newMovie),
       headers: {
