@@ -33,7 +33,7 @@ const App = (props) => {
             <Route exact path="/" element={<Home  />} />
             <Route path="/movieindex" element={<MovieIndex movies={movies}/>} />
             <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/movienew" element={<MovieNew />} />
+            <Route path="/movienew" element={<MovieNew current_user={props.current_user}/>} />
             <Route path="/mymovies" element={<MyMovies movies={movies} current_user={props.current_user}/>} />
             <Route path="/movieshow/:id" element={<MovieShow movies={movies} />} />
             <Route path="*" element={<NotFound />} />

@@ -101,3 +101,8 @@ body {
 .main {
     min-height: calc(100vh-30px);
 }
+
+.form {
+    display: flex;
+    justify-content: space-around;
+}
