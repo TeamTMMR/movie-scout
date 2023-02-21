@@ -9,9 +9,11 @@ import {
   Button,
 } 
 from 'reactstrap'
+import { useNavigate } from "react-router-dom"
 
 const MovieNew = ({current_user}) => {
 
+  const navigate = useNavigate()
   const [newMovie, setNewMovie] = useState({
     title: '',
     genre: '',
@@ -24,6 +26,10 @@ const MovieNew = ({current_user}) => {
 
   const handleChange = (e) => {
     setNewMovie({...newMovie, [e.target.name]: e.target.value})
+  }
+
+  const handleSubmit = () => {
+    navigate("/mymovies")
   }
 
   return (
@@ -120,7 +126,7 @@ const MovieNew = ({current_user}) => {
               defaultValue={newMovie.img_url}
             />
           </FormGroup>
-          <Button>
+          <Button onClick={handleSubmit}>
             Upload Movie
           </Button>
         </Form>
