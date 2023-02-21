@@ -12,7 +12,7 @@ from 'reactstrap'
 import { useNavigate, useParams } from "react-router-dom"
 
 
-const MovieEdit = ({current_user, movies}) => {
+const MovieEdit = ({current_user, movies, updateMovie}) => {
 
   const {id} = useParams()
   let currentMovie = movies?.find(movie => movie.id === +id)
@@ -34,8 +34,8 @@ const MovieEdit = ({current_user, movies}) => {
   const navigate = useNavigate()
 
   const handleSubmit = () => {
+    updateMovie(editMovie, currentMovie.id)
     navigate(`/movieshow/${currentMovie.id}`)
-    console.log("movie edit:", {...editMovie, id:id});
   }
 
   return (
@@ -134,7 +134,7 @@ const MovieEdit = ({current_user, movies}) => {
             />
           </FormGroup>
           <Button onClick={handleSubmit}>
-            Upload Movie
+            Update Movie
           </Button>
         </Form>
       </div>

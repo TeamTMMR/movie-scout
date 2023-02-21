@@ -38,6 +38,20 @@ const App = (props) => {
     .then((payload) => readMovie())
     .catch((errors) => console.log("Movie create errors:", errors))
   }
+  const updateMovie = (movie, id) => {
+    fetch(`/movies/${id}`, {
+      body: JSON.stringify(movie),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH" 
+    })
+    .then((response) => response.json())
+    .then((payload) => readMovie())
+    .catch((errors) => console.log("Movie update errors:", errors))
+
+  } 
+
 
     return (
       <BrowserRouter>
@@ -50,7 +64,7 @@ const App = (props) => {
             <Route path="/movienew" element={<MovieNew current_user={props.current_user} createMovie={createMovie}/>} />
             <Route path="/mymovies" element={<MyMovies movies={movies} current_user={props.current_user}/>} />
             <Route path="/movieshow/:id" element={<MovieShow movies={movies} />} />
-            <Route path="/movieedit/:id" element={<MovieEdit movies={movies} current_user={props.current_user}/>} />
+            <Route path="/movieedit/:id" element={<MovieEdit movies={movies} current_user={props.current_user} updateMovie={updateMovie}/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
