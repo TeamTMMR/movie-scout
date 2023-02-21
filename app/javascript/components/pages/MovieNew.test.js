@@ -4,14 +4,20 @@ import MovieNew from "./MovieNew"
 import { BrowserRouter } from "react-router-dom"
 
 describe("<MovieNew />", () => {
+  const current_user = {
+    id: 1,
+  }
   it("renders without crashing", () => {
-    const div = document.createElement("div")
-    render(<MovieNew />, div)
+    render(
+      <BrowserRouter>
+        <MovieNew current_user={current_user} />
+      </BrowserRouter>
+    )
   })
   it("has a form description", () => {
     render(
       <BrowserRouter>
-        <MovieNew />
+        <MovieNew current_user={current_user} />
       </BrowserRouter>
     )
     const upload = screen.getByText(/Add/i)
