@@ -5,7 +5,7 @@ const MyMovies = ({ movies, current_user }) => {
   const userMovies = movies?.filter((movie) => {
     return movie.user_id === current_user.id
   })
-  console.log("userMovies:", userMovies)
+  
   return (
     <main>
       <h1> My Movie List </h1>
