@@ -1,9 +1,11 @@
 import React from "react"
 import { useParams, NavLink } from "react-router-dom"
+import { Button } from "reactstrap" 
 
-const MyMoviesShow = ({current_user, movies}) => {
+const MyMoviesShow = ({current_user, movies, deleteMovie}) => {
   const { id } = useParams()
   let currentMovie = movies?.find((movie) => movie.id === +id)
+
 
   return (
     <main> 
@@ -23,7 +25,9 @@ const MyMoviesShow = ({current_user, movies}) => {
           </div>
 
           <NavLink to={`/movieedit/${id}`}>Edit Movie</NavLink>
-          <NavLink>Delete Movie</NavLink>
+          <NavLink to={"/mymovies"}>
+            <Button onClick={() => {deleteMovie(id)}}> Delete Movie </Button>
+          </NavLink>
 
           <NavLink 
             to={'/movieindex'} 
