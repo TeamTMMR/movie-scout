@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardTitle, CardBody, CardSubtitle, Button } from "reactstrap";
-
+import { NavLink } from "react-router-dom";
 const MyMovies = ({ movies, current_user }) => {
   const userMovies = movies?.filter((movie) => {
     return movie.user_id === current_user.id
@@ -23,7 +23,7 @@ const MyMovies = ({ movies, current_user }) => {
               <CardSubtitle className="mb-2 text-muted" tag="h6">
                 {movie.genre}
               </CardSubtitle>
-              <Button>More Details</Button>
+              <NavLink to={`/mymoviesshow/${movie.id}`}>More Details</NavLink>
             </CardBody>
           </Card>
         );
