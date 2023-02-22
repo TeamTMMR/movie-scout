@@ -35,7 +35,7 @@ const MovieEdit = ({current_user, movies, updateMovie}) => {
 
   const handleSubmit = () => {
     updateMovie(editMovie, currentMovie.id)
-    navigate(`/movieshow/${currentMovie.id}`)
+    navigate(`/mymoviesshow/${currentMovie.id}`)
   }
 
   return (

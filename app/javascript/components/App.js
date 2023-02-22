@@ -9,6 +9,7 @@ import MovieNew from "./pages/MovieNew"
 import MyMovies from "./pages/MyMovies"
 import NotFound from "./pages/NotFound"
 import MovieShow from "./pages/MovieShow"
+import MyMoviesShow from "./pages/MyMoviesShow"
 import MovieEdit from "./pages/MovieEdit"
 
 
@@ -63,6 +64,7 @@ const App = (props) => {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/movienew" element={<MovieNew current_user={props.current_user} createMovie={createMovie}/>} />
             <Route path="/mymovies" element={<MyMovies movies={movies} current_user={props.current_user}/>} />
+            <Route path="/mymoviesshow/:id" element={<MyMoviesShow movies={movies} current_user={props.current_user} />} />
             <Route path="/movieshow/:id" element={<MovieShow movies={movies} />} />
             <Route path="/movieedit/:id" element={<MovieEdit movies={movies} current_user={props.current_user} updateMovie={updateMovie}/>} />
             <Route path="*" element={<NotFound />} />
