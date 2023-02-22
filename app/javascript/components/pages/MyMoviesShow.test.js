@@ -2,6 +2,8 @@ import React from "react"
 import { render, screen } from "@testing-library/react"
 import MyMoviesShow from "./MyMoviesShow"
 import { MemoryRouter, Routes, Route } from "react-router-dom"
+import userEvent from "@testing-library/user-event"
+
 
 const mockMovie = [
   {
@@ -33,7 +35,6 @@ const renderShow = () => {
 }
 describe("MyMoviesShow", (user) => {
   it("renders without crashing", () => {
-    
     renderShow()
   })
   it("has a movie's description", () => {
@@ -41,7 +42,13 @@ describe("MyMoviesShow", (user) => {
     const desc = screen.getByText(/Synopsis/i)
     expect(desc).toBeInTheDocument()
   })
+  it("has clickable links" , () => {
+    renderShow()
+    userEvent.click(screen.getByText(/See All Movies/i))
+    expect(screen.getByText(/See All Movies/i)).toBeInTheDocument()
+    userEvent.click(screen.getByText(/delete movie/i))
+    expect(screen.getByText(/delete movie/i)).toBeInTheDocument()
+    userEvent.click(screen.getByText(/edit/i))
+    expect(screen.getByText(/edit/i)).toBeInTheDocument()
+  })
 })
-
-
-//lines changed 29, 34, 39
