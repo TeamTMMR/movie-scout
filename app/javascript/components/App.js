@@ -54,7 +54,15 @@ const App = (props) => {
   } 
 
   const deleteMovie = (id) => {
-    console.log(`/movies/${id}`)
+    fetch(`/movies/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    }) 
+      .then((response) => response.json())
+      .then((payload) => readMovie())
+      .catch((errors) => console.log("delete errors:", errors))
   } 
 
 
