@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom"
 
 describe("<NotFound />", () => {
   it("renders without crashing", () => {
+    jest.mock("../assets/404.png", () => "image")
     const div = document.createElement("div")
     render(<NotFound />, div)
   })
