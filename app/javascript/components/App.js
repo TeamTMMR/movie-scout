@@ -53,6 +53,10 @@ const App = (props) => {
 
   } 
 
+  const deleteMovie = (id) => {
+    console.log(`/movies/${id}`)
+  } 
+
 
     return (
       <BrowserRouter>
@@ -64,7 +68,7 @@ const App = (props) => {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/movienew" element={<MovieNew current_user={props.current_user} createMovie={createMovie}/>} />
             <Route path="/mymovies" element={<MyMovies movies={movies} current_user={props.current_user}/>} />
-            <Route path="/mymoviesshow/:id" element={<MyMoviesShow movies={movies} current_user={props.current_user} />} />
+            <Route path="/mymoviesshow/:id" element={<MyMoviesShow movies={movies} current_user={props.current_user}  deleteMovie={deleteMovie}/>} />
             <Route path="/movieshow/:id" element={<MovieShow movies={movies} />} />
             <Route path="/movieedit/:id" element={<MovieEdit movies={movies} current_user={props.current_user} updateMovie={updateMovie}/>} />
             <Route path="*" element={<NotFound />} />
