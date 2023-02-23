@@ -1,0 +1,39 @@
+.navbar {
+    background-color: rgba(255, 255, 255, 0);
+   
+}
+.navbar {
+--bs-navbar-hover-color: #63B7DB;
+}
+
+
+.navbar-brand {
+    color: white;
+    --bs-navbar-brand-hover-color: #63B7DB;
+    
+}
+#navbar-brand {
+    color: white;
+}
+#navbar-brand:hover {
+    color: #63B7DB;
+}
+
+.nav-item .navbar-link {
+    color: rgb(255, 255, 255);
+    display:inline-block;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 15px;
+    padding: 0;
+}
+.nav-item .navbar-link:hover {
+    color:#63B7DB;
+}
+.navbar-toggler-icon {
+    color: white;
+}
+.nav_item::after {
+ color: white;
+
+}
