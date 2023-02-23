@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1677095889972" clover="3.2.0">
+  <project timestamp="1677095889972" name="All files">
+    <metrics statements="49" coveredstatements="39" conditionals="9" coveredconditionals="8" methods="23" coveredmethods="14" elements="81" coveredelements="61" complexity="0" loc="49" ncloc="49" packages="2" files="12" classes="12"/>
+    <package name="components">
+      <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <file name="Footer.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/components/Footer.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="Header.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/components/Header.js">
+        <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+      <file name="Navigation.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/components/Navigation.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages">
+      <metrics statements="43" coveredstatements="33" conditionals="5" coveredconditionals="5" methods="20" coveredmethods="11"/>
+      <file name="AboutUs.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/pages/AboutUs.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="Home.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/pages/Home.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+      </file>
+      <file name="MovieEdit.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/pages/MovieEdit.js">
+        <metrics statements="11" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+      </file>
+      <file name="MovieIndex.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/pages/MovieIndex.js">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+      <file name="MovieNew.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/pages/MovieNew.js">
+        <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+      </file>
+      <file name="MovieShow.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/pages/MovieShow.js">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+      </file>
+      <file name="MyMovies.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/pages/MyMovies.js">
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="MyMoviesShow.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/pages/MyMoviesShow.js">
+        <metrics statements="5" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="2"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+      <file name="NotFound.js" path="/Users/learnacademy/Desktop/movie-scout/app/javascript/components/pages/NotFound.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
