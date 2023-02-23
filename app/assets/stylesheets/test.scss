@@ -1,0 +1,48 @@
+@import "bootstrap";
+
+body {
+    background-color: #1E2129;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.footer {
+    height: 3rem;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(5, 3, 49, 0);
+    align-items: center;
+    justify-content: center;  
+    display: flex;
+    padding-bottom: 10;
+}
+
+.show-container {
+    height: 35rem;
+    width: 45rem;
+    border: 4px solid black;
+}
+
+.show-container img {
+    width: 35%;
+}
+
+.return-link {
+    color: white;
+}
+
+.main {
+    min-height: calc(100vh-30px);
+}
+
+.form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.error img {
+    height: 20rem;
+}

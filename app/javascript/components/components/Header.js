@@ -16,57 +16,55 @@ const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out
   <>
     <div className='header'>
       <Navbar>
-        <NavbarBrand href="/">Movie Scout</NavbarBrand>
-          <Nav className="me-auto" navbar>
+        <NavbarBrand id='navbar-brand' href="/">Movie Scout</NavbarBrand>
         {!logged_in && (
-            <NavItem className='nav-item'>
-              <NavLink>
-                <a href="/movieindex" className="nav-link">
+          <Nav>
+            <NavItem>
+              <NavLink className='navbar-link' href="/movieindex">
                   All Movies
-                </a>
-              </NavLink>
-              <NavLink>
-                <a href={sign_in_route} className="nav-link">
-                  Sign In
-                </a>
-              </NavLink>
-              <NavLink>
-                <a href={new_user_route} className="nav-link">
-                  Sign Up
-                </a>
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink className='navbar-link' href={sign_in_route}>
+                  Sign In
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='navbar-link' href={new_user_route}>
+                  Sign Up
+              </NavLink>
+            </NavItem>
+          </Nav>
         )}
         {logged_in && (
+          <Nav>
             <NavItem>
-              <NavLink>
-                <a href="/movieindex" className="nav-link">
+              <NavLink className='navbar-link' href="/movieindex">
                   All Movies
-                </a>
-              </NavLink>
-              <NavLink>
-                <a href="/mymovies" className="nav-link">
-                  My Movies
-                </a>
-              </NavLink>
-              <NavLink>
-                <a href={sign_out_route} className="nav-link">
-                  Sign Out
-                </a>
-              </NavLink>
-              <NavLink>
-                <a href= "/aboutus" className="nav-link">
-                  About Us
-                </a>
-              </NavLink>
-              <NavLink>
-                <a href="/movienew" className="nav-link">
-                  Upload Movie
-                </a>
               </NavLink>
             </NavItem>
-        )}
+            <NavItem>
+              <NavLink className='navbar-link' href="/mymovies">
+                  My Movies
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='navbar-link' href={sign_out_route}>
+                  Sign Out
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='navbar-link' href= "/aboutus">
+                  About Us
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='navbar-link' href="/movienew">
+                  Upload Movie
+              </NavLink>
+            </NavItem>
           </Nav>
+        )}
       </Navbar>
     </div>
   </>
