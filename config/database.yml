@@ -80,7 +80,4 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: movie_scout_production
-  username: movie_scout
-  password: <%= ENV["MOVIE_SCOUT_DATABASE_PASSWORD"] %>
+  <<: *defaulturl: <%= ENV['DATABASE_URL'] %>
