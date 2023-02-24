@@ -7,8 +7,9 @@ const MyMovies = ({ movies, current_user }) => {
   })
   
   return (
-    <main>
+    <main className="index-title">
       <h1> My Movie List </h1>
+      <div className="card-container">
       {userMovies?.map((movie, index) => {
         return (
           <Card
@@ -28,6 +29,7 @@ const MyMovies = ({ movies, current_user }) => {
           </Card>
         );
       })}
+      </div>
     </main>
   );
 };

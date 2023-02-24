@@ -4,8 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const MovieIndex = ({ movies }) => {
 return (
-    <main >
+    <main className="index-title">
       <h1> Movie List </h1>
+      <div className="card-container">
       {movies?.map((movie, index) => {
         return (
           <Card
@@ -27,6 +28,7 @@ return (
           </Card>
         );
       })}
+      </div>
     </main>
   );
 };

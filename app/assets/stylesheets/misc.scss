@@ -1,4 +1,7 @@
 @import "bootstrap";
+:root {
+--first-color: #63B7DB;
+}
 
 body {
     background-color: #1E2129;
@@ -38,6 +41,22 @@ body {
     min-height: calc(100vh-30px);
 }
 
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+	flex-direction: row;
+	align-items: stretch;
+	align-content: flex-start;
+
+}
+.index-title h1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 3rem;
+    color: var(--first-color);
+    }
 .form {
     display: flex;
     justify-content: space-around;
