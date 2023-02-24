@@ -1,12 +1,16 @@
 import React from "react"
-import { useParams, NavLink } from "react-router-dom"
-import { Button } from "reactstrap" 
+import { useParams, useNavigate } from "react-router-dom"
 
-const MyMoviesShow = ({current_user, movies, deleteMovie}) => {
+const MyMoviesShow = ({current_user, movies, deleteMovie, editMovie}) => {
   const { id } = useParams()
   let currentMovie = movies?.find((movie) => movie.id === +id)
-
-
+  const navigate = useNavigate()
+  const handleSubmit = () => {
+    navigate("/mymovies")
+  }
+  const handleEdit = () => {
+    navigate(`/movieedit/${id}`)
+  }
   return (
     <main> 
     
@@ -23,18 +27,19 @@ const MyMoviesShow = ({current_user, movies, deleteMovie}) => {
             <h6>{currentMovie.run_time}</h6>
             <p>Synopsis: {currentMovie.description}</p>
           </div>
+            <button onClick={() => {
+                handleEdit();
+                }}> Edit Movie 
+                </button>
+            <button onClick={() => {
+              deleteMovie(id);
+              handleSubmit();
+              }}> Delete Movie </button>
 
-          <NavLink to={`/movieedit/${id}`}>Edit Movie</NavLink>
-          <NavLink to={"/mymovies"}>
-            <Button onClick={() => {deleteMovie(id)}}> Delete Movie </Button>
-          </NavLink>
-
-          <NavLink 
-            to={'/movieindex'} 
-            className="return-link"
-          >
-            See All Movies
-          </NavLink>
+         
+          <button className="see-all-button" onClick={handleSubmit}>
+            See My Movies
+         </button>
         </>
       )}
   
