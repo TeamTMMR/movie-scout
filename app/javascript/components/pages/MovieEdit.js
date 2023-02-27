@@ -40,7 +40,7 @@ const MovieEdit = ({current_user, movies, updateMovie}) => {
 
   return (
     <>
-    <h2>Edit Movie</h2>
+    <h2 className="edit-movie-title">Edit Movie</h2>
       <div className="form">
         <Form>
           <Row>
@@ -133,7 +133,7 @@ const MovieEdit = ({current_user, movies, updateMovie}) => {
               value={editMovie.img_url}
             />
           </FormGroup>
-          <Button onClick={handleSubmit}>
+          <Button className="update-button" onClick={handleSubmit}>
             Update Movie
           </Button>
         </Form>
