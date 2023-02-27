@@ -1,61 +1,51 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-<!-- Movie Scout App
+Movie Scout App
 
 ##### Overview 
-Movie Scout App was created with the purpose of allowing its users to build a list of movies to watch. The app uses Ruby on Rails to host React components in a monolithic application. We installed the Devise gem to create a realtionship bewteen the User and Movie databases. 
+Movie Scout App was created with the purpose of allowing its users to build a list of movies to watch. The app uses Ruby on Rails to host React components in a monolithic application. The Devise gem was used for authorization and authentication. We have two tables in our database: the user and movie tables.  
 
 Live Link:
 
 ##### Tech Used/Dependencies 
-- JavaScript
-- Rspec
-- Jest 
+- JavaScript/React
+- Ruby
+- SCSS
+- JSON
+- PostgreSQL
 
 Add-on packages include 
-- JSON
 - Devise 
 - Reactstrap
 - Yarn
+- Webpacker
+- Bootstrap
+- Babel
+- Rspec
+- Jest
 
 ##### Installation
 
 **Useful Commands** 
 
+- clone the project locally 
+- cd into movie-scout repo
 - $ bundle
 - $ yarn
 
+**New Dev**
+- $ rails db:setup
+
 **Returning Dev**
 - $ rails db:reset
-- $ rails db:migrate
 
-**New Dev**
-- $ rails db:create
-- $ rails db:seed
-- $ rails db:migrate
+##### Features 
+This project includes:
 
-##### Features  -->
+- A welcome page
+- Ability to sign up and/or log in 
+- Movie index page, which displays all movies 
+- Movie show pages, which include details about a certain movie 
+- Users have ability to add a movie 
+- Users have ability to edit a movie they added 
+- Users have ability to delete a movie they added
+- Frontend and backend testing 
+- 
