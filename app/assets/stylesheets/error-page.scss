@@ -1,0 +1,36 @@
+.error-container{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.error-container h1 {
+    color: #63B7DB;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    font-size: 3rem;
+}
+
+.error-pic {
+    display: flex;
+    justify-content: space-around;
+
+}
+.error-pic img {
+    height: 20rem;
+    border-radius: .3rem;
+}
+.back-button {
+    display:flex;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: .25rem;
+    background-color: #63B7DB;
+    color: white;
+    scale:calc(1.1)
+
+}
+.back-button:hover {
+    transform: scale(1.1)
+}
