@@ -12,10 +12,13 @@ const Home = () => {
     <>
       <div className="welcome-container">
         <h1> Movie Scout </h1>
+        <br/>
         <div className="welcome-text">
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+        <p> Welcome to Movie Scout, the ultimate destination for movie buffs and couch potatoes alike! Here you'll find a treasure trove of films, ranging from critically acclaimed masterpieces to guilty pleasure flicks that you secretly adore. Our platform is the perfect place to discover new movies to add to your watch list, or share your favorites with the world. So, grab some popcorn, kick back, and start exploring our collection today! </p>
         </div>
+        <br/>
         <button className="welcome-button" onClick={handleSubmit}>Get Started</button>
+        <br/>
       </div>
     
     </>
