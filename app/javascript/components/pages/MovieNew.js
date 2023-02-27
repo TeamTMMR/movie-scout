@@ -35,7 +35,8 @@ const MovieNew = ({ createMovie, current_user }) => {
 
   return (
     <>
-    <h2>Add a Movie</h2>
+    <h2 className="add-movie-title">Add a Movie</h2>
+  <br/>
       <div className="form">
         <Form>
           <Row>
@@ -128,7 +129,7 @@ const MovieNew = ({ createMovie, current_user }) => {
               value={newMovie.img_url}
             />
           </FormGroup>
-          <Button onClick={handleSubmit}>
+          <Button className="upload-button" onClick={handleSubmit}>
             Upload Movie
           </Button>
         </Form>
