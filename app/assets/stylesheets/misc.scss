@@ -14,14 +14,14 @@ body {
 .footer {
     height: 3rem;
     width: 100vw;
-    left: 0;
-    bottom: 0;
+    margin-right:auto;
+    margin-left: auto;
+    bottom: 0px;
     position: fixed;
-    background-color: rgba(5, 3, 49, 0);
+    background: none;
     align-items: center;
     justify-content: center;  
     display: flex;
-    padding-bottom: 10;
 }
 
 .return-link {
