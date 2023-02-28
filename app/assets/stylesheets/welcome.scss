@@ -27,8 +27,11 @@
     border: 1px solid white;
     border-radius: .25rem;
     width: 10rem;
-    margin-left: 42%;
-    margin-right: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .welcome-button:hover {

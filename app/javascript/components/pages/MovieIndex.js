@@ -20,8 +20,8 @@ return (
       <div className="card-container">
       {movies?.map((movie, index) => {
         return (
-          <NavLink className="card-nav-link" to={`/movieshow/${movie.id}`}>
-          <Card
+          <NavLink className="more-details-nav-link" to={`/movieshow/${movie.id}`}>
+          <Card className="my-movie-card"
             style={{
             width: "18rem",
             }}

@@ -9,11 +9,20 @@
 	flex-direction: row;
 	align-items: stretch;
 	align-content: flex-start;
-    
+    text-decoration: none !important;
+}
+.my-movie-card {
+    color: white;
+}
+
+.my-movie-card:hover {
+    box-shadow: 0px 0px 20px 7px white;
+    text-decoration: none ;
 }
 .card-body {
     background-color: grey;
     color: white;
+    text-decoration: none;
 } 
 .card-body h6 {
     color: white;
@@ -21,6 +30,7 @@
 
 .card img {
     border-radius: inherit;
+    height: 25.5rem;
 }
 
 .movie-cover {
@@ -36,7 +46,6 @@
     border-radius: .25rem;
     background-color: #b6b6b6;
     color: white;
-    text-decoration: none;
 }
 
 .more-details-button:hover{
@@ -44,7 +53,7 @@
 }
 
 .card-nav-link {
-    text-decoration:none;
+    text-decoration: none !important;
     color: white;
 }
 .card-nav-link:hover {
@@ -54,4 +63,9 @@
 
 .card-body h6 {
     color: white;
+}
+
+.more-details-nav-link {
+    text-decoration: none;
+    color: white !important;
 }
