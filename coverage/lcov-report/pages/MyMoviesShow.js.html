@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">69.23% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>9/13</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>2/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>8/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -107,14 +107,41 @@
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,7 +162,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,13 +184,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react"
-import { useParams, NavLink } from "react-router-dom"
-import { Button } from "reactstrap" 
+import { useParams, useNavigate} from "react-router-dom"
 &nbsp;
 const MyMoviesShow = ({current_user, movies, deleteMovie}) =&gt; {
   const { id } = useParams()
   let currentMovie = movies?.find((movie) =&gt; movie.id === +id)
 &nbsp;
+  const navigate = useNavigate()
+&nbsp;
+  const handleSubmit = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    navigate("/movieindex")</span>
+  }
+  const handleEditNav = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    navigate("/movieedit/" + id)</span>
+  }
+  const handleDeleteNav = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    deleteMovie(id)</span>
+<span class="cstat-no" title="statement not covered" >    navigate("/mymovies")</span>
+  }
 &nbsp;
   return (
     &lt;main&gt; 
@@ -170,31 +213,36 @@ const MyMoviesShow = ({current_user, movies, deleteMovie}) =&gt; {
               src={currentMovie.img_url}
               alt="movie cover"
             /&gt;
+&lt;br&gt;&lt;/br&gt;
+            &lt;div className="show-info"&gt;
             &lt;h2&gt;{currentMovie.title} &lt;/h2&gt;
-            &lt;h4&gt;{currentMovie.release_year}&lt;/h4&gt;
-            &lt;h5&gt;{currentMovie.genre}&lt;/h5&gt;
+              &lt;div className="show-info-line"&gt;     
+                &lt;h4&gt;{currentMovie.release_year}&lt;/h4&gt;
+                &lt;h4&gt;{currentMovie.genre}&lt;/h4&gt;
+              &lt;/div&gt;      
             &lt;h6&gt;{currentMovie.run_time}&lt;/h6&gt;
             &lt;p&gt;Synopsis: {currentMovie.description}&lt;/p&gt;
           &lt;/div&gt;
+&lt;br&gt;&lt;/br&gt;
+         
 &nbsp;
-          &lt;NavLink to={`/movieedit/${id}`}&gt;Edit Movie&lt;/NavLink&gt;
-          &lt;NavLink to={"/mymovies"}&gt;
-            &lt;Button onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; {<span class="cstat-no" title="statement not covered" >deleteMovie(id)}</span>}&gt; Delete Movie &lt;/Button&gt;
-          &lt;/NavLink&gt;
+          &lt;div className="buttons-container"&gt;
+          &lt;button className="edit-movie-button" onClick={handleEditNav}&gt;
+            Edit Movie
+          &lt;/button&gt;
+          &lt;button className="delete-movie-button" onClick={handleDeleteNav}&gt; Delete Movie &lt;/button&gt;
+          &lt;/div&gt;
 &nbsp;
-          &lt;NavLink 
-            to={'/movieindex'} 
-            className="return-link"
-          &gt;
+          &lt;button className="see-all-button" onClick={handleSubmit}&gt;
             See All Movies
-          &lt;/NavLink&gt;
+          &lt;/button&gt; 
+          &lt;/div&gt;
         &lt;/&gt;
       )}
   
     &lt;/main&gt;
   )
 }
-&nbsp;
 export default MyMoviesShow</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -202,7 +250,7 @@ export default MyMoviesShow</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-22T19:58:09.961Z
+                at 2023-02-27T21:46:06.629Z
             </div>
         <script src="../prettify.js"></script>
         <script>

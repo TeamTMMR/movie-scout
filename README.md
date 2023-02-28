@@ -44,8 +44,8 @@ This project includes:
 - Ability to sign up and/or log in 
 - Movie index page, which displays all movies 
 - Movie show pages, which include details about a certain movie 
+- Movie search page, which is connected to an external API (allows a person to search a movie title and the movie's details will be displayed) 
 - Users have ability to add a movie 
 - Users have ability to edit a movie they added 
 - Users have ability to delete a movie they added
 - Frontend and backend testing 
-- 

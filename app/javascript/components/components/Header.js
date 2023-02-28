@@ -10,19 +10,28 @@ import {
   NavLink,
   Col,
 } from 'reactstrap';
-import SearchBar from './SearchBar';
+
 const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out_route}) => {
   return (
   <>
     <div className='header'>
       <Navbar>
         <NavbarBrand id='navbar-brand' href="/">Movie Scout</NavbarBrand>
-        <SearchBar />
         {!logged_in && (
           <Nav>
             <NavItem>
               <NavLink className='navbar-link' href="/movieindex">
                   All Movies
+              </NavLink>
+            </NavItem>
+            <NavItem>
+            <NavLink className='navbar-link' href="/moviesearch">
+                  Search Movies
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='navbar-link' href= "/aboutus">
+                  About Us
               </NavLink>
             </NavItem>
             <NavItem>
@@ -33,11 +42,6 @@ const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out
             <NavItem>
               <NavLink className='navbar-link' href={new_user_route}>
                   Sign Up
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className='navbar-link' href= "/aboutus">
-                  About Us
               </NavLink>
             </NavItem>
           </Nav>
@@ -55,10 +59,10 @@ const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className='navbar-link' href={sign_out_route}>
-                  Sign Out
+            <NavLink className='navbar-link' href="/moviesearch">
+                Search Movies
               </NavLink>
-            </NavItem>
+              </NavItem>
             <NavItem>
               <NavLink className='navbar-link' href= "/aboutus">
                   About Us
@@ -67,6 +71,11 @@ const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out
             <NavItem>
               <NavLink className='navbar-link' href="/movienew">
                   Upload Movie
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='navbar-link' href={sign_out_route}>
+                  Sign Out
               </NavLink>
             </NavItem>
           </Nav>

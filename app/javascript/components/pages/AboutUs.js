@@ -34,7 +34,7 @@ const AboutUs = () => {
         <img src={Raymond} alt='circle' />
 <br/>
         <div className='about-paragraph'>
-        <p>A designer with expertise in styling and chilling, Raymond is the Design Lead. He is responsible for the UI/UX ideas and cuts the entire USA army’s hair. What a guy! Fun Fact: He created a new shade of green.</p>  
+        <p>A designer with expertise in styling and chilling, Raymond is the Design Lead. He is responsible for the UI/UX ideas and cuts the entire US Army’s hair. Fun Fact: He created a new shade of green.</p>  
       </div>  
         </div>
   </div>
