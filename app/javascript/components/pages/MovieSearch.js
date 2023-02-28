@@ -7,7 +7,7 @@ const MovieSearch = () => {
   const [movieData, setMovieData] = useState({})
 
   const submitFn = (title) => {
-    fetch(`http://www.omdbapi.com/?t=${title}&apikey=a4b67ca`)
+    fetch(`https://www.omdbapi.com/?t=${title}&apikey=a4b67ca`)
     .then(response => {
       return response.json()})
     .then(data => {
