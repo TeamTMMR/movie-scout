@@ -20,7 +20,7 @@ const MyMovies = ({ movies, current_user }) => {
       <div className="card-container">
       {userMovies?.map((movie, index) => {
         return (
-          <NavLink className="more-details-nav-link" to={`/movieshow/${movie.id}`}>
+          <NavLink className="more-details-nav-link" to={`/mymoviesshow/${movie.id}`}>
           <Card className="my-movie-card"
             style={{
               width: "18rem",
