@@ -8,7 +8,7 @@ const MyMoviesShow = ({current_user, movies, deleteMovie}) => {
   const navigate = useNavigate()
 
   const handleSubmit = () => {
-    navigate("/movieindex")
+    navigate("/mymovies")
   }
   const handleEditNav = () => {
     navigate("/movieedit/" + id)
@@ -49,7 +49,7 @@ const MyMoviesShow = ({current_user, movies, deleteMovie}) => {
           </div>
 
           <button className="see-all-button" onClick={handleSubmit}>
-            See All Movies
+            See My Movies
           </button> 
           </div>
         </>
