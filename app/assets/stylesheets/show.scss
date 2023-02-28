@@ -3,79 +3,101 @@
     width: 45rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
+    padding: 10px;
 }
-
 .show-container img {
-    width: 50%;
     display: flex;
-    margin-left: auto;
+    justify-content: space-around;
+    align-items: center;
     margin-right: auto;
-    padding: 10px;
+    margin-left: auto;
+    width: 35%;
 }
 
-.info-box {
-    background-color: #2E3C63;
-    border: 1px solid white;
-    border-radius: .3rem;
-    display: inline-block;
-    padding: 10px;
+.show-container h6 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
 }
 
-.info-box h2 {
+.show-container p {
     display: flex;
     justify-content: center;
 }
 
-.info-box h4 {
+.show-info {
+    background-color: #2E3C63;
+    height: 30%;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 1rem;
+    padding: 10px;
+    overflow: auto;
+}
+.show-info h2 {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
-.movie-numbers {
+
+.show-info-line {
     display: flex;
     justify-content: space-between;
 }
 
-.info-box h5 {
+.see-all-button {
     display: flex;
-    justify-content: center;
-}
-
-.info-box p {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.return-link {
-    border: 1px solid white;
-    background-color: var(--first-color);
-    padding: 2px;
+    margin-right: auto;
+    margin-left: auto;
     border-radius: .25rem;
-}
-
-.return-link:hover {
-    background-color: var(--second-color);
-    color: white;
-}
-
-.see-all-movies {
     border: 1px solid white;
-    background-color: var(--first-color);
-    padding: 4px;
-    border-radius: .25rem;
+    background-color: #63B7DB;
     color: white;
+    scale:calc(1.1)
+}
+
+.see-all-button:hover{
+    transform: scale(1.1);
+    box-shadow: white 0 1px;
+}
+
+.edit-movie-button {
     display: flex;
+    border-radius: .25rem;
+    border: 1px solid white;
+    background-color: #63B7DB;
+    color: white;
+    scale:calc(1.1)
+}
+
+.edit-movie-button:hover{
+    transform: scale(1.1);
+    box-shadow: white 0 1px;
+}
+.delete-movie-button {
+    display: flex;
+    border-radius: .25rem;
+    border: 1px solid white;
+    background-color: #63B7DB;
+    color: white;
+    scale:calc(1.1)
+}
+
+.delete-movie-button:hover{
+    transform: scale(1.1);
+    box-shadow: white 0 1px;
+}
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3%;
-    height: 2rem;
-    width: 7rem;
-    justify-content: center;
-    text-align: center;
+
 }
-.see-all-movies:hover {
-    background-color: var(--second-color);
-    color: white;
+
+.card-subtitle {
+    color: white !important;
 }

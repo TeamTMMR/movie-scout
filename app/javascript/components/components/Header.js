@@ -25,6 +25,16 @@ const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out
               </NavLink>
             </NavItem>
             <NavItem>
+            <NavLink className='navbar-link' href="/moviesearch">
+                  Search Movies
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='navbar-link' href= "/aboutus">
+                  About Us
+              </NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink className='navbar-link' href={sign_in_route}>
                   Sign In
               </NavLink>
@@ -49,10 +59,10 @@ const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className='navbar-link' href={sign_out_route}>
-                  Sign Out
+            <NavLink className='navbar-link' href="/moviesearch">
+                Search Movies
               </NavLink>
-            </NavItem>
+              </NavItem>
             <NavItem>
               <NavLink className='navbar-link' href= "/aboutus">
                   About Us
@@ -61,6 +71,11 @@ const Header = ({sign_in_route, logged_in, current_user, new_user_route,sign_out
             <NavItem>
               <NavLink className='navbar-link' href="/movienew">
                   Upload Movie
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className='navbar-link' href={sign_out_route}>
+                  Sign Out
               </NavLink>
             </NavItem>
           </Nav>

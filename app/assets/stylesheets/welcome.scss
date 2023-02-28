@@ -1,12 +1,11 @@
 .welcome-container {
     height: 22rem;
-    width: 65%;
+    width: 50rem;
     background-color: #ffffff00;
     border-radius: .25rem;
-    border: 1px white;
     color: rgb(255, 255, 255);
-    margin-left: 18%;
-    margin-right: 18%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10%;
     margin-bottom: 10%;
     font-size: 1.25rem;
@@ -28,8 +27,11 @@
     border: 1px solid white;
     border-radius: .25rem;
     width: 10rem;
-    margin-left: 42%;
-    margin-right: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .welcome-button:hover {
