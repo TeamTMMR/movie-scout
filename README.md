@@ -3,7 +3,7 @@ Movie Scout App
 ##### Overview 
 Movie Scout App was created with the purpose of allowing its users to build a list of movies to watch. The app uses Ruby on Rails to host React components in a monolithic application. The Devise gem was used for authorization and authentication. We have two tables in our database: the user and movie tables.  
 
-Live Link:
+Live Link: https://movie-scout.onrender.com/ 
 
 ##### Tech Used/Dependencies 
 - JavaScript/React

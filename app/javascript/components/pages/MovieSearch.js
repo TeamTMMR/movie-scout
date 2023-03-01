@@ -5,9 +5,9 @@ import SearchBar from '../components/SearchBar'
 
 const MovieSearch = () => {
   const [movieData, setMovieData] = useState({})
-
+  const apiKey = process.env.REACT_APP_OMDB_API_KEY
   const submitFn = (title) => {
-    fetch(`https://www.omdbapi.com/?t=${title}&apikey=a4b67ca`)
+    fetch(`https://www.omdbapi.com/?t=${title}&apikey=${apiKey}`)
     .then(response => {
       return response.json()})
     .then(data => {
